@@ -34,4 +34,25 @@ var showName = function () {
     return;
 };
 // 4. Rest parameter
+function resparams(name) {
+    var classes = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        classes[_i - 1] = arguments[_i];
+    }
+    return "Sinh vi\u00EAn ".concat(name, " ho\u0323c l\u01A1\u0301p ").concat(classes.join(","));
+}
+console.log(resparams("Qúy Lờ đờ", "TypeScript", "NodeJs"));
 // 5. Callback
+var arrNum = [1, 3, 5, 7, 9];
+function we17307_map(numbers, callback) {
+    var temp = [];
+    for (var i = 0; i < numbers.length; i++) {
+        var newNumber = callback(numbers[i]);
+        temp.push(newNumber);
+    }
+    return temp;
+}
+var result = we17307_map(arrNum, function (item) {
+    return item * item;
+});
+console.log(result);

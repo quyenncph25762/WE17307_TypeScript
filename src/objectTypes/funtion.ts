@@ -45,4 +45,26 @@ const showName = function (): string {
 
 // 4. Rest parameter
 
+function resparams(name: string, ...classes: string[]): string {
+    return `Sinh viên ${name} học lớp ${classes.join(",")}`
+}
+console.log(resparams("Qúy Lờ đờ", "TypeScript", "NodeJs"));
+
 // 5. Callback
+
+const arrNum = [1, 3, 5, 7, 9];
+
+function we17307_map(numbers: number[], callback?: (item: number) => number): number[] {
+    const temp = []
+    for (let i = 0; i < numbers.length; i++) {
+        const newNumber = callback(numbers[i]);
+        temp.push(newNumber)
+    }
+    return temp
+}
+
+const result = we17307_map(arrNum, (item) => {
+    return item * item
+})
+
+console.log(result);
