@@ -1,3 +1,3 @@
-const homePage = () => {
+const homePage = (link: string = "http://") => {
 
 }
